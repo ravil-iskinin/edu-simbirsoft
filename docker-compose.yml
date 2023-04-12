@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  flaskex:
+    image: docker_compose_build_image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docker_compose_run 
+    restart: always
+    ports:
+      - '5050:5000'
